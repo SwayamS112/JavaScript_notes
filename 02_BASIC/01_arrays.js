@@ -40,7 +40,7 @@ console.log(marvel[3]);//[ 'superman', 'flash', 'batman' ]
 const merged = marvel.concat(dc)
 console.log(merged);//[ 'spiderman', 'ironman', 'hulk', 'superman', 'flash', 'batman' ]
 
-const allnewHeros = [...marvel,...dc]
+const allnewHeros = [...marvel,...dc] // ... spread operator
 console.log(allnewHeros);//[ 'spiderman', 'ironman', 'hulk', 'superman', 'flash', 'batman' ]
 
 const arr1 = [1,2,3,[4,5,6],[7,8,9],[10,11,12]]
