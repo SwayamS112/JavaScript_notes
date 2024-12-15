@@ -1,7 +1,6 @@
 // singleton 
 //Object.create
 // object literals
-/*
 const mySym = Symbol("key1") // syntax to define symbol
 
 const user1 = {
@@ -53,7 +52,7 @@ user1.greeting4 = function () {
 
 console.log(user1.greeting3());  // Output: hello js
 console.log(user1.greeting4()); // Output: hello js, swayam
-*/
+
 
 //const tinderuser = new Object() // other way to define object
 const tinderuser = {}
@@ -103,3 +102,13 @@ console.log(Object.entries(tinderuser));//[ [ 'id', '123' ], [ 'name', 'sam' ], 
 console.log(tinderuser.hasOwnProperty("isloggedIn"));//true
 console.log(tinderuser.hasOwnProperty("fullname"));//false
 
+const course = {
+    courseName : "Js in hindi",
+    price : 999,
+    courseInstructor : "hitesh"
+}
+// console.log(course.courseInstructor)
+//   |-> to short this syntax we have another 
+const {courseInstructor} = course // also know as destructuring
+// or const {courseInstructor = instructor} now i can use instructor instead of course.courseInstructor
+console.log(courseInstructor);
