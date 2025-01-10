@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class="Languages">
+<li>JAVASCRIPT</li>
+    </ul>
+</body>
+<script>
+    function addLan(languageName){
+    const li = document.createElement('li');
+    //li.innerHTML =`${languageName}` do the same work as textcontent
+    li.textContent=languageName
+    document.querySelector('.Languages').appendChild(li)    
+    }
+    addLan("Python")
+    addLan("TypeScript")
+
+    function addlan2(languageName2){
+        const li = document.createElement('li')
+        const addText = document.createTextNode(languageName2)
+        li.appendChild(addText)
+        document.querySelector('.Languages').appendChild(li)
+    }
+addlan2('html')
+addlan2('node')
+
+// edit 
+const second_lang = document.querySelector("li:nth-child(2)")
+console.log(second_lang); // python 
+//second_lang.innerHTML = "mojo"
+const newLi = document.createElement("li")
+newLi.textContent = "mojo";
+second_lang.replaceWith(newLi);
+
+const third_lang = document.querySelector("li:first-child")
+console.log(third_lang);//JAVASCRIPT
+third_lang.outerHTML = '<li>c++</li>'
+
+//Remove
+const last_lang = document.querySelector("li:last-child")
+console.log(last_lang);//node
+last_lang.remove();
+</script>
+</html>
