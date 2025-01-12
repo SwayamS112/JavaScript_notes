@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Projects</title>
+</head>
+<body>
+    <h1>Coding</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // 2 ways to use 
+    setTimeout(function(){
+    console.log("swayam");
+    },2000)
+
+    const saySwayam = ()=>{
+        console.log("sood");
+    }
+setTimeout(saySwayam,2000)
+
+// interval means it will print sood infinite time in a wait of 1 sec
+//     setInterval(function(){
+// console.log("sood");
+//     },1000)
+    const changeText = function(){
+    document.querySelector("h1").innerText="SWAYAM SOOD"
+}
+const changeME = setTimeout(changeText,3000);
+
+document.querySelector("#stop").addEventListener("click",function(){
+    clearTimeout(changeME)
+    console.log("STOP");
+}) // this is if i click this button then h2 text will not change
+</script>
+</html>
