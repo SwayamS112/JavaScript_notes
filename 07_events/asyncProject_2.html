@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Projects</title>
+</head>
+<body>
+    <h1>Coding</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // 2 ways to setIntervals
+// const interval = ()=>{
+//         console.log("sood");
+//     }
+//     const sood = setInterval(interval,1000)
+// clearInterval(sood)
+
+// setInterval (function(){
+// console.log("swayam",Date.now());
+// },2000);
+
+// const date = function(str){
+//     console.log(str,Date.now());
+// }
+// const intervals = setInterval(date,2000,"hi");
+// clearInterval(intervals)
+ 
+const start = document.getElementById("start")
+const stop = document.getElementById("stop")
+start.addEventListener("click",function(){
+const Dates = function(){
+    console.log("Latest Time:",Date.now());
+}
+const intervals = setInterval(Dates,1000)
+stop.addEventListener("click",function(){
+    clearInterval(intervals);
+})
+})
+</script>
+</html>
