@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <script>
+        const requestLink = "https://api.github.com/users/SwayamS112"
+    const xhr = new XMLHttpRequest()
+     xhr.open("GET",requestLink)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            console.log(this.responseText);
+        }
+    }
+    xhr.send();
+
+    </script>
+</body>
+</html>
